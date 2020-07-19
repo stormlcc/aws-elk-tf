@@ -1,5 +1,5 @@
 # ELK Terraform (AWS Platform - Amazon Elasticsearch)
-### (AWS Platform - Custom Logstash AMI and Amazon Elasticsearch)
+##### (AWS Platform - Custom Logstash AMI and Amazon Elasticsearch)
 
 ## Included Docker Compose YAML
 for creating your own AMI.
