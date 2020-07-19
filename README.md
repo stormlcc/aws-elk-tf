@@ -17,8 +17,8 @@ Put your pipeline and config files in the EC2 (same paths in the yaml)\
 If there are no "pipeline" and "config" directory in that path, create them\
 Create a Route53 subdomain (e.g. es-endpoint.com)\
 For your ES output (in the pipeline file), point it to the private subdomain instead of the ES Endpoint URL.\
-Capture the AMI and use the ID in your TF deployment\
-After deployment, copy the ES Endpoint URL to the subdomain CNAME
+After deployment, copy the ES Endpoint URL to the subdomain CNAME\
+Capture the AMI and use the ID in your TF deployment
 
 ## Terraform User Inputs and Options
 Note: VPC ID will be required to be manually input during TF APPLY
