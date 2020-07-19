@@ -50,9 +50,10 @@ resource "aws_instance" "ec2-logstash1" and "ec2-logstash2":\
     ami           = "ami-"\
     subnet_id     = "subnet-"\
     availability_zone = "us-east-1a"\
-    key_name = "instance key"\
+    key_name = "instance key"
 
 FILE: modules/ec2_nlb/nlb.tf
+------------------
 resource "aws_lb"\
     subnets = ["subnet-yoursubnet1","subnet-yoursubnet2"]
 
