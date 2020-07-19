@@ -3,12 +3,12 @@
 Note: you will not find a more complete package than this in github (for Amazon ELK)
 
 ## Included Logstash Docker Compose YAML
-For creating your own AMI
-Logstash docker using official image
-Using port 5044 for Filebeat input
-Will also:
-1. install the Amazon ES plugin and create the logstash pipeline and config volumes
-2. use Timezone Asia/Singapore (change this to your own TZ)
+For creating your own AMI\
+Logstash docker using official image\
+Using port 5044 for Filebeat input\
+Will also:\
+1. install the Amazon ES plugin and create the logstash pipeline and config volumes\
+2. use Timezone Asia/Singapore (change this to your own TZ)\
 
 ## Create Logstash AMI
 Launch EC2 (minimum t3a.small - Ubuntu LTS 18)
