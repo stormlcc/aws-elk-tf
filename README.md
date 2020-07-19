@@ -8,7 +8,7 @@ Logstash docker using official image\
 Using port 5044 for Filebeat input\
 Included in the yaml will also:
 1. install the Amazon ES plugin and create the logstash pipeline and config volumes\
-2. use Timezone Asia/Singapore (change this to your own TZ)\
+2. use Timezone Asia/Singapore (change this to your own TZ)
 
 ## Create Logstash AMI
 Launch EC2 (minimum t3a.small - Ubuntu LTS 18)\
