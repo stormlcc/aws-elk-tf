@@ -55,16 +55,15 @@ module "aws_es" {
   domain_name = var.es_domain_name
   elasticsearch_version = var.es_version
   create_service_link_role = false
-  
+
   #security_group_ids = [module.es_security_group.security_group["aws-es-sg"].id]
-   
- 
+
+
   vpc_options = {
-    subnet_ids         = ["subnet-09d4eabab3723173b", "subnet-0c8c65ac3877921b7"]
-    #security_group_ids = ["sg-02c810133b7e11a83"]
+    subnet_ids         = ["subnet-xxxxxxxxxx", "subnet-xxxxxxxxxx"]
     security_group_ids = [module.es_security_group.security_group["aws-es-sg"].id]
   }
- 
+
   cluster_config = {
     dedicated_master_enabled = "false"
     instance_count           = "2"
@@ -148,10 +147,10 @@ module "ec2-logstash" {
   source = ".//modules/ec2_nlb"
   instance_type = "t3a.small"
   name = "logstash-dev"
-  department = "cse"
+  department = "yourdepartment"
   environment = "development"
   project = "elk-project"
-  ticket = "CS-239"
+  ticket = "CS-xxx"
   nlb_config               = var.nlb_config
   forwarding_config        = var.forwarding_config
   tg_config                = var.tg_config
