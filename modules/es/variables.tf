@@ -256,5 +256,5 @@ variable "create_service_link_role" {
 
 variable "vpc_id" {
     type = string
+    #default   = "vpc-xxxxxxxxxxxxxxxxxxx"
 }
-
