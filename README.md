@@ -17,7 +17,7 @@ Put your pipeline and config files in the EC2 (same paths in the yaml)\
 If there are no "pipeline" and "config" directory in that path, create them\
 Capture the AMI and use the ID in your TF deployment
 
-##Terraform User Inputs and Options
+## Terraform User Inputs and Options
 Note: VPC ID will be required to be manually input during TF APPLY
 
 FILE: root/main.tf
