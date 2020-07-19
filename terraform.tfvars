@@ -1,0 +1,8 @@
+profile        = "default"
+region         = "us-east-1"
+es_domain_name = "elkdev"
+es_version     = "7.4"
+department     = "cse"
+environment    = "development"
+project        = "elk-project"
+ticket         = "CS-239"
