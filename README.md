@@ -39,7 +39,7 @@ module "ec2-logstash":\
     department = "your-department"\
     owner = "your name here"\
     project = "elk-project"\
-    ticket = "CS-xxx"
+    ticket = "CS-xxx"\
 module "aws_es" :\
     vpc_options\
     subnet_ids = ["subnet-yoursubnet1", "subnet-yoursubnet2"]
@@ -50,10 +50,10 @@ resource "aws_instance" "ec2-logstash1" and "ec2-logstash2":\
     ami           = "ami-"\
     subnet_id     = "subnet-"\
     availability_zone = "us-east-1a"\
-    key_name = "instance key"
+    key_name = "instance key"\
 
 FILE: modules/ec2_nlb/nlb.tf
-resource "aws_lb"
+resource "aws_lb"\
     subnets = ["subnet-yoursubnet1","subnet-yoursubnet2"]
 
 FILE: modules/ec2_nlb/variables.tf
@@ -65,7 +65,7 @@ FILE: modules/es/variables.tf
 ------------------
 variable "domain_name"\
 variable "ebs_options_volume_size"\
-All default values (when needed)
+All default values (when needed)\
 Un-hash and define vpc_id default if you do not want to input it during tf apply
 
 FILE: modules/es/main.tf
