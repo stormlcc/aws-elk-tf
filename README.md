@@ -6,7 +6,7 @@ Note: you will not find a more complete package than this in github (for Amazon 
 For creating your own AMI\
 Logstash docker using official image\
 Using port 5044 for Filebeat input\
-Will also:
+Included in the yaml will also:
 1. install the Amazon ES plugin and create the logstash pipeline and config volumes\
 2. use Timezone Asia/Singapore (change this to your own TZ)\
 
@@ -15,7 +15,10 @@ Launch EC2 (minimum t3a.small - Ubuntu LTS 18)\
 Install Docker and use the docker-compose.yaml to setup launch Logstash container\
 Put your pipeline and config files in the EC2 (same paths in the yaml)\
 If there are no "pipeline" and "config" directory in that path, create them\
-Capture the AMI and use the ID in your TF deployment
+Create a Route53 subdomain (e.g. es-endpoint.com)\
+For your ES output (in the pipeline file), point it to the private subdomain instead of the ES Endpoint URL.\
+Capture the AMI and use the ID in your TF deployment\
+After deployment, copy the ES Endpoint URL to the subdomain CNAME
 
 ## Terraform User Inputs and Options
 Note: VPC ID will be required to be manually input during TF APPLY
