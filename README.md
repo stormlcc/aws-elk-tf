@@ -1,12 +1,20 @@
-# ELK Terraform (AWS Platform - Amazon Elasticsearch)
-##### (AWS Platform - Custom Logstash AMI and Amazon Elasticsearch)
+# ELK Terraform
+#### (AWS Platform - Custom Logstash AMI, Amazon Elasticsearch & Kibana)
+Note: you will not find a more complete package than this in github (for Amazon ELK)
 
-## Included Docker Compose YAML
-for creating your own AMI.
+## Included Logstash Docker Compose YAML
+For creating your own AMI
+Logstash docker using official image
+Using port 5044 for Filebeat input
+Will also:
+1. install the Amazon ES plugin and create the logstash pipeline and config volumes
+2. use Timezone Asia/Singapore (change this to your own TZ)
 
 ## Create Logstash AMI
 Launch EC2 (minimum t3a.small - Ubuntu LTS 18)
 Install Docker and use the docker-compose.yaml to setup launch Logstash container
+Put your pipeline and config files in the EC2 (same paths in the yaml)
+If there are no "pipeline" and "config" directory in that path, create them
 Capture the AMI and use the ID in your TF deployment
 
 ##Terraform User Inputs and Options
