@@ -1,4 +1,14 @@
-# ELK Terraform User Inputs and Options
+# ELK Terraform (AWS Platform - Amazon Elasticsearch)
+##(AWS Platform - Custom Logstash AMI and Amazon Elasticsearch)
+
+##Included Docker Compose
+###For creating your own AMI.
+Launch EC2 (minimum t3a.small - Ubuntu LTS 18)
+Install Docker and use the docker-compose.yaml to setup Logstash
+Capture the AMI and use the ID in your TF deployment
+
+##Terraform User Inputs and Options
+Note: VPC ID will be required to be manually input during TF APPLY
 
 FILE: root/main.tf
 ------------------
