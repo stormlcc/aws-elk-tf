@@ -79,3 +79,10 @@ module "aws_security_group":\
     ports\
     cidr_blocks\
     description
+
+FILE: modules/iamprofile/s3policy.json
+------------------
+Note: This is for you to archive your logs to S3\
+Create your bucket first and input the bucket ARN into:
+"Resource": [
+    "arn:aws:s3:::yourbucketarn"
