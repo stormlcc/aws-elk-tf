@@ -22,7 +22,10 @@ After deployment, copy the ES Endpoint URL to the subdomain CNAME\
 Capture the AMI and use the ID in your TF deployment
 
 ## Terraform User Inputs and Options
-Note: VPC ID will be required to be manually input during TF APPLY
+
+FILE: root/terraform.tfvars
+------------------
+all values must be defined
 
 FILE: root/main.tf
 ------------------
