@@ -1,6 +1,10 @@
 # ELK Terraform
 #### (AWS Platform - Custom Logstash AMI, Amazon Elasticsearch & Kibana)
-Note: you will not find a more complete package than this in github (for Amazon ELK)
+Note: you will not find a more complete package than this in github (for Amazon ELK)\
+These Terraform codes will deploy:
+1. Amazon ES (VPC) domain
+2. 2 units EC2
+3. NLB (internal)
 
 ## Included Logstash Docker Compose YAML
 For creating your own AMI\
