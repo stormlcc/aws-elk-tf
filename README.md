@@ -5,6 +5,7 @@ These Terraform codes will deploy:
 1. Amazon ES (VPC) domain
 2. 2 units EC2
 3. NLB (internal)
+4. Route53 Private Subdomain for Logstash input and ES Endpoint URL
 
 ## Included Logstash Docker Compose YAML
 For creating your own AMI\
@@ -19,11 +20,13 @@ Launch EC2 (minimum t3a.small - Ubuntu LTS 18)\
 Install Docker and use the docker-compose.yaml to setup launch Logstash container\
 Put your pipeline and config files in the EC2 (same paths in the yaml)\
 If there are no "pipeline" and "config" directory in that path, create them\
-Create a Route53 subdomain (e.g. es-endpoint.com)\
-For your ES output (in the pipeline file), point it to the private subdomain instead of the ES Endpoint URL.\
-Also add this to outputs: ssl_certificate_verification => false\
-After deployment, copy the ES Endpoint URL to the subdomain CNAME\
+For your ES output (in the pipeline file), point it to the private subdomain (aws-elasticsearch.elkdev.com) instead of the actual ES Endpoint URL.\
+Also add this to logstash pipeline outputs: ssl_certificate_verification => false\
 Capture the AMI and use the ID in your TF deployment
+
+## After Deployment
+1. copy the ES Endpoint URL to the ES subdomain (aws-elasticsearch.elkdev.com) CNAME record
+2. copy the NLB DNS name to the logstash subdomain (logstash.elkdev.com) CNAME record
 
 ## Terraform User Inputs and Options
 

@@ -8,7 +8,7 @@
                 "s3:ListBucket"
             ],
             "Resource": [
-                "arn:aws:s3:::yourbucketarn"
+                "arn:aws:s3:::cse-elk.test-backup"
             ]
         },
         {
@@ -20,7 +20,7 @@
                 "s3:DeleteObject"
             ],
             "Resource": [
-                "arn:aws:s3:::yourbucketarn/*"
+                "arn:aws:s3:::cse-elk.test-backup/*"
             ]
         }
     ]

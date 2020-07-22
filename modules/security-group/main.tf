@@ -4,9 +4,6 @@ resource "aws_security_group" "security-group" {
     name        = each.key
     description = each.value.description
     vpc_id      = var.vpc_id
-    tags = {
-      Name = "elktesting-sg"
-    }
 }
 
 resource "aws_security_group_rule" "rule" {

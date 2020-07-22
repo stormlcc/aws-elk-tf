@@ -1,22 +1,6 @@
-variable "instance_type" {
-  description = "ec2 instance_type"
+variable "vpc_id" {
+  description = "vpc_id"
   type        = string
-  default     = "t3a.small"
-}
-
-variable "security_group_ids" {
-  type = list(string)
-}
-
-variable "nlb_config" {
-  type = map
-}
-
-variable "tg_config" {
-  type = map
-}
-
-variable "forwarding_config" {
 }
 
 variable "name" {
