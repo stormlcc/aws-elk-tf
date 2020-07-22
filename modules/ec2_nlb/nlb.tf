@@ -12,7 +12,7 @@ resource "aws_lb" "load_balancer" {
   load_balancer_type = "network"
   internal           = true
   enable_deletion_protection = true
-  subnets            = ["subnet-060951f276e50bece","subnet-0d2254b87b3651de1"]
+  subnets            = ["subnet-yoursubnetidhere","subnet-yoursubnetidhere"]
   tags = {
   "Name" = var.name
   "department" = var.department

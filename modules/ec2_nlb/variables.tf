@@ -28,7 +28,7 @@ variable "name" {
 variable "department" {
   description = "department"
   type        = string
-  default     = "cse"
+  default     = "department"
 }
 
 variable "environment" {
@@ -46,5 +46,5 @@ variable "project" {
 variable "ticket" {
   description = "ticket"
   type        = string
-  default     = "CS-239"
+  default     = "CS-xxx"
 }

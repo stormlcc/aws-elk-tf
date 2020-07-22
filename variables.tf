@@ -1,6 +1,6 @@
 variable "vpc_id" {
     type = string
-    #default = "vpc-0e78b2e9333877b23"
+    #default = "vpc-yourvpcidhere"
 }
 
 ####
@@ -11,7 +11,7 @@ variable "nlb_config" {
     name            = "logstash-nlb"
     internal        = "false"
     environment     = "test"
-    nlb_vpc_id      = "vpc-0a3c8076c106ff7d4"
+    nlb_vpc_id      = "vpc-yourvpcidhere"
   }
 }
 
@@ -20,7 +20,7 @@ variable "tg_config" {
     name                              = "logstash-nlb-tg"
     target_type                       = "instance"
     health_check_protocol             = "TCP"
-    tg_vpc_id                         = "vpc-0a3c8076c106ff7d4"
+    tg_vpc_id                         = "vpc-yourvpcidhere"
   }
 }
 
@@ -75,4 +75,3 @@ variable "ticket" {
   description = "ticket"
   type        = string
 }
-

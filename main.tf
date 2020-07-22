@@ -44,7 +44,7 @@ module "es_security_group" {
                     cidr_blocks = ["172.10.0.0/24"]
                     self        = false
                     }
-                    
+
                 https = {
                     type        = "ingress"
                     description = "Allow Logstash inbound"
@@ -66,12 +66,12 @@ module "aws_es" {
   domain_name = var.es_domain_name
   elasticsearch_version = var.es_version
   create_service_link_role = false
-  
+
   vpc_options = {
-    subnet_ids         = ["subnet-060951f276e50bece", "subnet-0d2254b87b3651de1"]
+    subnet_ids         = ["subnet-yoursubnetidhere", "subnet-yoursubnetidhere"]
     security_group_ids = [module.es_security_group.security_group["aws-es-sg"].id]
   }
- 
+
   cluster_config = {
     dedicated_master_enabled = "false"
     instance_count           = "2"
