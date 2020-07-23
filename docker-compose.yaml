@@ -1,0 +1,15 @@
+version: "3"
+services:
+    logstash:
+      container_name: logstash
+      image: docker.elastic.co/logstash/logstash:7.8.0
+      restart: always
+      ports:
+        - "5044:5044"
+      command: bash -c "logstash-plugin install logstash-output-amazon_es && /usr/local/bin/docker-entrypoint"
+      volumes:
+        - /usr/share/logstash/pipeline/:/usr/share/logstash/pipeline/
+        - /usr/share/logstash/config/:/usr/share/logstash/config/
+      environment:
+        - TZ=Asia/Singapore
+      
